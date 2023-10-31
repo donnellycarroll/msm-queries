@@ -1,6 +1,7 @@
 <h1>List of directors</h1>
 
 <table border="1">
+
   <tr>
     <th>ID</th>
     <th>Image</th>
@@ -9,17 +10,18 @@
     <th></th>
   </tr>
 
-  <%=Director.all.each do |a_director|%>
+
+  <% Director.all.each do |a_director| %>
 
     <tr>
-      <td><%=a_director.id%></td>
+      <td><%= a_director.id %></td>
       <td>
-        <img src="<%=a_director.image%>" width="100">
+        <img src="<%= a_director.image %>" width="100">
       </td>
-      <td><%=a_director.name%></td>
-      <td><%=a_director.dob%></td>
+      <td><%= a_director.name %></td>
+      <td><%= a_director.dob %></td>
       <td>
-        <a hef="/directors/<%=a_director.id%>">Show Details</a>
+        <a href="/directors/<%= a_director.id %>">Show Details</a>
       </td>
     </tr>
   <%end%>
