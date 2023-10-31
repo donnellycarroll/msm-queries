@@ -1,6 +1,6 @@
 class DirectorsController < ApplicationController
   def index
-    render({ :template => "director_templates/list"})
+    render({ :template => "director_templates/list" })
   end
 
   def show
@@ -10,7 +10,7 @@ class DirectorsController < ApplicationController
 
     @the_director = matching_records.at(0)
 
-    render({ :template => "director_templates/details"})
+    render({ :template => "director_templates/details" })
   end
 
 end
